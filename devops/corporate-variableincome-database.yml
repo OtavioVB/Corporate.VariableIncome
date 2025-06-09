@@ -1,0 +1,44 @@
+services:
+  corporate-variableincome-database:
+    image: postgres
+    container_name: corporate-variableincome-database
+    ports: 
+      - 15000:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: corporate-variableincome-database
+    volumes:
+      - corporate-variableincome-database-data:/var/lib/postgresql
+      - corporate-variableincome-database-postgreesql-data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - corporate-variableincome-database
+  corporate-variableincome-database-viewer:
+    image: dpage/pgadmin4
+    user: root
+    container_name: corporate-variableincome-database-viewer
+    environment:
+      PGADMIN_DEFAULT_EMAIL: variableincome@itau.com.br
+      PGADMIN_DEFAULT_PASSWORD: senha@123
+      MAX_LOGIN_ATTEMPTS: -1 
+      ACCOUNT_LOCK_TIME: 0   
+    volumes:
+      - corporate-variableincome-database-viewer-data:/var/lib/pgadmin
+    ports:
+      - 16000:80
+    restart: always
+    depends_on:
+      - corporate-variableincome-database
+    networks:
+      - corporate-variableincome-database
+
+networks:
+  corporate-variableincome-database:
+    name: corporate-variableincome-database
+    driver: bridge
+
+volumes:
+    corporate-variableincome-database-data:
+    corporate-variableincome-database-viewer-data:
+    corporate-variableincome-database-postgreesql-data:

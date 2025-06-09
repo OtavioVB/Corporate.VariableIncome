@@ -1,0 +1,51 @@
+###
+PRODUCER quotation-update
+topic: corporate-variableincome.asset-quotation.updated
+key: 46892c92-c97a-48a5-94ca-c8909720cd8d
+{
+    "idempotencyKey": "f63a2d2d-29f1-4e6c-b68c-2e67a5299f21",
+    "assetId": "46892c92-c97a-48a5-94ca-c8909720cd8d",
+    "unitaryPrice": 12.12,
+    "dateTime": "2025-06-08T23:15:25Z"
+}
+
+
+###
+PRODUCER request-position-update
+topic: corporate-variableincome.positions.update-request
+key: 5d3e0040-0be7-4ddd-b084-e5006036fc5b
+{
+    "idempotencyKey": "5d3edddd-0be7-4ddd-b084-e5006036fc5b",
+    "assetId": "46892c92-c97a-48a5-94ca-c8909720cd8d",
+    "unitaryPrice": 9.70,
+    "dateTime": "2025-06-07T04:55:47Z"
+}
+
+###
+PRODUCER position-update
+topic: corporate-variableincome.positions.update
+key: 46892c92-c97a-48a5-94ca-c8909720cd8d
+{
+    "quotation": {
+        "idempotencyKey": "5d3e0040-0be7-4ddd-b084-e5006036fc5b",
+        "assetId": "46892c92-c97a-48a5-94ca-c8909720cd8d",
+        "unitaryPrice": 9.70,
+        "dateTime": "2025-06-07T04:55:47Z"
+    },
+    "positions": [
+        {
+            "positionId": "bf994a87-3724-408a-aabf-ba923f5743fc",
+            "assetId": "46892c92-c97a-48a5-94ca-c8909720cd8d",
+            "userId": "5d3e0040-0be7-4ddd-b084-e5006036fc5b",
+            "quantity": 5,
+            "averagePrice": 10.00,
+            "dateTime": "2025-06-06T04:55:46Z",
+            "proftAndLoss": 0.57
+        }
+    ]
+}
+
+###
+CONSUMER variableincome
+topic: corporate-variableincome.asset-quotation.updated
+from: earliest

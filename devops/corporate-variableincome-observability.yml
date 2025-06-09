@@ -1,0 +1,17 @@
+services:
+  corporate-variableincome-observability-otel-collector:
+    image: otel/opentelemetry-collector:0.68.0
+    container_name: corporate-variableincome-observability-otel-collector
+    command: ["--config=/etc/corporate-variableincome-observability-otel-config.yaml"]
+    ports:
+      - 17000:4317
+    volumes:
+      - "./corporate-variableincome-observability-otel-config.yml:/etc/corporate-variableincome-observability-otel-config.yml"
+      - "./corporate-variableincome-observability-logs.json:/etc/output/corporate-variableincome-observability-logs.json"
+    networks:
+      - corporate-variableincome-observability
+
+networks:
+  corporate-variableincome-observability:
+    name: corporate-variableincome-observability
+    driver: bridge

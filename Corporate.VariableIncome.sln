@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1AF82507-F795-4B8A-92DC-7BC1BD05C456}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{AB23CD93-1F2E-4032-BED2-7D75E0EE2840}"
+	ProjectSection(SolutionItems) = preProject
+		docs\MENSAGERIA.jpg = docs\MENSAGERIA.jpg
+		openapispec.v3.json = openapispec.v3.json
+		PRODUCER.kafka = PRODUCER.kafka
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corporate.VariableIncome.WebApi", "src\Corporate.VariableIncome.WebApi\Corporate.VariableIncome.WebApi.csproj", "{DECCC759-2E93-4473-BE19-C164D1FC1816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corporate.VariableIncome.Domain", "src\Corporate.VariableIncome.Domain\Corporate.VariableIncome.Domain.csproj", "{843A1661-E9A0-424D-83EC-EEEE4C2D06B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corporate.VariableIncome.Application", "src\Corporate.VariableIncome.Application\Corporate.VariableIncome.Application.csproj", "{104D5ABD-B638-4841-BECB-CE9AD2D1B679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corporate.VariableIncome.Infrascructure", "src\Corporate.VariableIncome.Infrascructure\Corporate.VariableIncome.Infrascructure.csproj", "{F263D6B3-5ED1-486B-B86C-D853B18E51FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tsts", "tsts", "{39855E67-50A2-4D2A-AB50-C5B43E39267C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corporate.VariableIncome.UnitTests", "tsts\Corporate.VariableIncome.UnitTests\Corporate.VariableIncome.UnitTests.csproj", "{657959B8-50D1-4D44-9B0F-9B6618B0E539}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{7A96622E-6379-4B5C-9716-597606EC974D}"
+	ProjectSection(SolutionItems) = preProject
+		devops\corporate-variableincome-database.yml = devops\corporate-variableincome-database.yml
+		devops\corporate-variableincome-infra.sh = devops\corporate-variableincome-infra.sh
+		devops\corporate-variableincome-messenger.yml = devops\corporate-variableincome-messenger.yml
+		devops\corporate-variableincome-observability-otel-config.yml = devops\corporate-variableincome-observability-otel-config.yml
+		devops\corporate-variableincome-observability.yml = devops\corporate-variableincome-observability.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corporate.VariableIncome.Worker", "src\Corporate.VariableIncome.Worker\Corporate.VariableIncome.Worker.csproj", "{0AFD568F-0092-4A83-A190-ACF3328EF9D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DECCC759-2E93-4473-BE19-C164D1FC1816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECCC759-2E93-4473-BE19-C164D1FC1816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECCC759-2E93-4473-BE19-C164D1FC1816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECCC759-2E93-4473-BE19-C164D1FC1816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{843A1661-E9A0-424D-83EC-EEEE4C2D06B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{843A1661-E9A0-424D-83EC-EEEE4C2D06B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{843A1661-E9A0-424D-83EC-EEEE4C2D06B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{843A1661-E9A0-424D-83EC-EEEE4C2D06B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104D5ABD-B638-4841-BECB-CE9AD2D1B679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104D5ABD-B638-4841-BECB-CE9AD2D1B679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104D5ABD-B638-4841-BECB-CE9AD2D1B679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104D5ABD-B638-4841-BECB-CE9AD2D1B679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F263D6B3-5ED1-486B-B86C-D853B18E51FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F263D6B3-5ED1-486B-B86C-D853B18E51FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F263D6B3-5ED1-486B-B86C-D853B18E51FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F263D6B3-5ED1-486B-B86C-D853B18E51FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657959B8-50D1-4D44-9B0F-9B6618B0E539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657959B8-50D1-4D44-9B0F-9B6618B0E539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657959B8-50D1-4D44-9B0F-9B6618B0E539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657959B8-50D1-4D44-9B0F-9B6618B0E539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AFD568F-0092-4A83-A190-ACF3328EF9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AFD568F-0092-4A83-A190-ACF3328EF9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AFD568F-0092-4A83-A190-ACF3328EF9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AFD568F-0092-4A83-A190-ACF3328EF9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DECCC759-2E93-4473-BE19-C164D1FC1816} = {1AF82507-F795-4B8A-92DC-7BC1BD05C456}
+		{843A1661-E9A0-424D-83EC-EEEE4C2D06B0} = {1AF82507-F795-4B8A-92DC-7BC1BD05C456}
+		{104D5ABD-B638-4841-BECB-CE9AD2D1B679} = {1AF82507-F795-4B8A-92DC-7BC1BD05C456}
+		{F263D6B3-5ED1-486B-B86C-D853B18E51FC} = {1AF82507-F795-4B8A-92DC-7BC1BD05C456}
+		{657959B8-50D1-4D44-9B0F-9B6618B0E539} = {39855E67-50A2-4D2A-AB50-C5B43E39267C}
+		{0AFD568F-0092-4A83-A190-ACF3328EF9D2} = {1AF82507-F795-4B8A-92DC-7BC1BD05C456}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Corporate.VariableIncome.Worker-bde49209-2b2d-4b0e-86a1-682ed51da940</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.10.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Corporate.VariableIncome.Application\Corporate.VariableIncome.Application.csproj" />
+    <ProjectReference Include="..\Corporate.VariableIncome.Domain\Corporate.VariableIncome.Domain.csproj" />
+    <ProjectReference Include="..\Corporate.VariableIncome.Infrascructure\Corporate.VariableIncome.Infrascructure.csproj" />
+  </ItemGroup>
+</Project>
